@@ -1,0 +1,18 @@
+1. __startswith=""
+2. __gte >=
+3. __gt >
+4. __lt <
+5. __lte <=
+6. __icontains soderjit
+7. __contains soderjit
+8. iexact / =
+9. isnull 
+10. orderby
+
+
+queryset = Post.objects.filter(title__startswith="The", title__icontains="a").exclude(title__icontains="b") 
+
+srezy (list ::) python
+
+ - model, url, filters, views, templates, all posts , routing,  post without admin from temp, 
+
