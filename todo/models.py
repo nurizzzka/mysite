@@ -11,9 +11,9 @@ class TodoList(models.Model):
     CANCELED = 'canceled'
 
     STATUSES = (
-    		(TO_DO, 'to do'),
-    		(DONE, 'done'),
-    		(CANCELED, 'canceled'),
+    		(TO_DO, 'Надо сделать'),
+    		(DONE, 'Сделано'),
+    		(CANCELED, 'Отменено'),
     	)
 
     status = models.CharField(max_length=10, choices=STATUSES, default=TO_DO)
