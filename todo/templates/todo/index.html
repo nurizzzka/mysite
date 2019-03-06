@@ -1,9 +1,18 @@
 {% extends './base.html' %}
 
 {% block header %}
-   header
+   <h1>TO DO APP</h1>
+
+	<form method="POST">
+		{% csrf_token %}
+		<input type="text" name="" placeholder="Введите...">
+		<button type="submit">Добавить</button>
+	</form>
 {% endblock %}
 
 {% block content %}
-   tralala
+	tralala
+	{% for post in context %}
+		<h1>{{ context.task }}</h1>
+	{% endfor %}
 {% endblock %}
