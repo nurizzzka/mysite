@@ -12,7 +12,9 @@
 
 {% block content %}
 	tralala
-	{% for post in context %}
-		<h1>{{ context.task }}</h1>
+	<table>
+	{% for todo in todo_list %}
+		<li>{{ todo.task }} {{ todo.status }}</li>
 	{% endfor %}
+	</table>
 {% endblock %}
