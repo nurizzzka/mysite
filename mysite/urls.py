@@ -20,5 +20,5 @@ from blog.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('blog.urls')),
+    path('blog/', include('blog.urls')),
 ]
