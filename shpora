@@ -10,6 +10,11 @@
 10. orderby
 
 
+shablony
+twik
+movie api
+
+
 queryset = Post.objects.filter(title__startswith="The", title__icontains="a").exclude(title__icontains="b") 
 
 srezy (list ::) python
