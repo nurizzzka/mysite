@@ -2,19 +2,27 @@
 
 {% block header %}
    <h1>TO DO APP</h1>
-
-	<form method="POST">
-		{% csrf_token %}
-		<input type="text" name="" placeholder="Введите...">
-		<button type="submit">Добавить</button>
-	</form>
 {% endblock %}
 
 {% block content %}
-	tralala
-	<table>
 	{% for todo in todo_list %}
-		<li>{{ todo.task }} {{ todo.status }}</li>
+		{% if todo.status == 'Сделано' %}
+			<ul class="task-block">
+				<li class="task">{{ todo.task }}</li>
+				<li class="status done">{{ todo.status }}</li>
+			</ul>
+		{% endif %}
+		{% if todo.status == 'Надо сделать' %}
+			<ul class="task-block">
+				<li class="task">{{ todo.task }}</li>
+				<li class="status to-do">{{ todo.status }}</li>
+			</ul>
+		{% endif %}
+		{% if todo.status == 'Отменено' %}
+			<ul class="task-block">
+				<li class="task">{{ todo.task }}</li>
+				<li class="status canceled">{{ todo.status }}</li>
+			</ul>
+		{% endif %}
 	{% endfor %}
-	</table>
 {% endblock %}

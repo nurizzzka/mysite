@@ -1,23 +1,24 @@
 from django.db import models
-
+from django import forms
 ''''Создайте модель со следующими полями
 Задача
 Статус (запланировано, выполнено, отменено)'''
+
+
 class TodoList(models.Model):
     task = models.CharField(max_length=100)
 
-    TO_DO = 'to do'
-    DONE = 'done'
-    CANCELED = 'canceled'
+    TO_DO = 'Надо сделать'
+    DONE = 'Сделано'
+    CANCELED = 'Отменено'
 
     STATUSES = (
-    		(TO_DO, 'Надо сделать'),
-    		(DONE, 'Сделано'),
-    		(CANCELED, 'Отменено'),
-    	)
+        (TO_DO, 'Надо сделать'),
+        (DONE, 'Сделано'),
+        (CANCELED, 'Отменено'),
+    )
 
-    status = models.CharField(max_length=10, choices=STATUSES, default=TO_DO)
-  
+    status = models.CharField(max_length=15, choices=STATUSES, default=TO_DO)
 
     def __str__(self):
         return self.task
