@@ -1,8 +1,5 @@
 from django.db import models
 from django import forms
-''''Создайте модель со следующими полями
-Задача
-Статус (запланировано, выполнено, отменено)'''
 
 
 class TodoList(models.Model):
