@@ -7,3 +7,6 @@ class TodoForm(forms.ModelForm):
     class Meta:
         model = TodoList
         fields = ('task', 'status',)
+
+
+       
