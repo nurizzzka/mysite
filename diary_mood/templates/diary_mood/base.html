@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Diary mood</title>
+</head>
+<body style="text-align: center; justify-content: center;">
+
+<header>
+	<h1><a href="/">Diary mood</a></h1>
+	<a href="{% url 'mood_add' %}">Add new mood</a>
+</header>
+<hr>
+
+<main>
+	 {% block content %}
+
+	 {% endblock %}
+</main>
+</body>
+</html>
