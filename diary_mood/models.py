@@ -1,6 +1,7 @@
 from django.db import models
 from datetime import datetime
 
+
 PRODUCT_QUANTITY_CHOICES = [(i, str(i)) for i in range(1, 11)]
 
 
