@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'blog',
     'todo',
+    'diary_mood',
 ]
 
 MIDDLEWARE = [
